@@ -4,3 +4,5 @@ football
 hockey
 gym
 vids dont work on live github pages
+beamng
+delete nhls
