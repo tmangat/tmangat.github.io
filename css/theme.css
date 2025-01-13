@@ -7,6 +7,10 @@ body {
 	background: #222;
 }
 
+video {
+	width: 25%;
+}
+
 img {
 	width: 25%;
 }
