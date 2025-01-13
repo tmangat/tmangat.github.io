@@ -3,8 +3,9 @@ all my cars pics and videos
 football
 hockey
 gym
-vids dont work on live github pages
 html disable screenshots
 meta viewport
 html mobile web app
 title bar color change, ios looks so nice
+html mobile web app
+html main, nav, seperate pages, font, header, footer
