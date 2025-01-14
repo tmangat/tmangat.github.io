@@ -53,6 +53,6 @@ $(document).ready(function () {
 		const imgElement = $("<img>").attr("src", imagePath);
 
 		// Append the <img> element to the gallery div
-		$("body").append(imgElement);
+		$("main").append(imgElement);
 	});
 });
