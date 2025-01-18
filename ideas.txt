@@ -10,3 +10,4 @@ title bar color change, ios looks so nice
 html mobile web app
 html main, nav, seperate pages, font, header, footer
 when clikcijng nav links back and forth, text, nav headfer and width keep changing as well
+font sf pro
