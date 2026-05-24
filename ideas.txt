@@ -1,8 +1,3 @@
-fav video games
-all my cars pics and videos
-football
-hockey
-gym
 html disable screenshots
 meta viewport
 html mobile web app
@@ -11,3 +6,7 @@ html mobile web app
 html main, nav, seperate pages, font, header, footer
 when clikcijng nav links back and forth, text, nav headfer and width keep changing as well
 font sf pro
+scripts
+theme
+favicon
+check old index
