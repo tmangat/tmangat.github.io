@@ -41,6 +41,24 @@
         input[type=number] {
             -moz-appearance: textfield;
         }
+
+        .amt-btn {
+            transition: all 0.15s ease-in-out;
+        }
+        .amt-btn.active {
+            background-color: #6366f1;
+            color: white;
+            box-shadow: 0 4px 6px -1px rgba(99, 102, 241, 0.4);
+            border-color: transparent;
+        }
+        .amt-btn:not(.active) {
+            background-color: white;
+            color: #4f46e5;
+            border: 1px solid #e0e7ff;
+        }
+        .amt-btn:not(.active):hover {
+            background-color: #eef2ff;
+        }
     </style>
 </head>
 <body class="bg-gradient-to-br from-sky-200 via-indigo-100 to-purple-200 min-h-screen flex items-center justify-center p-4">
@@ -67,9 +85,20 @@
                 </div>
             </div>
 
-            <div class="flex items-center justify-center gap-3 mb-6">
-                <label for="pointAmount" class="text-sm font-bold text-gray-600">Amount:</label>
-                <input type="number" id="pointAmount" value="1" min="1" class="w-20 text-center font-bold text-xl py-2 px-3 rounded-xl border-2 border-indigo-100 focus:border-indigo-400 focus:outline-none transition-colors text-indigo-700 bg-indigo-50/50 shadow-inner">
+            <div class="mb-6 bg-white/60 rounded-2xl p-4 shadow-sm border border-white">
+                <div class="text-xs uppercase tracking-widest font-bold text-gray-500 mb-3">Select Amount</div>
+                
+                <div class="flex flex-wrap items-center justify-center gap-2 mb-3">
+                    <button onclick="setAmount(1)" class="amt-btn active px-4 py-2 rounded-xl font-black active:scale-95" data-val="1">1</button>
+                    <button onclick="setAmount(10)" class="amt-btn px-4 py-2 rounded-xl font-black active:scale-95" data-val="10">10</button>
+                    <button onclick="setAmount(50)" class="amt-btn px-4 py-2 rounded-xl font-black active:scale-95" data-val="50">50</button>
+                    <button onclick="setAmount(100)" class="amt-btn px-4 py-2 rounded-xl font-black active:scale-95" data-val="100">100</button>
+                </div>
+                
+                <div class="flex items-center justify-center gap-3">
+                    <label for="pointAmount" class="text-xs font-bold text-gray-400">CUSTOM:</label>
+                    <input type="number" id="pointAmount" value="1" min="1" oninput="handleCustomInput()" class="w-24 text-center font-bold text-xl py-1 px-2 rounded-lg border-2 border-indigo-100 focus:border-indigo-400 focus:outline-none transition-colors text-indigo-700 bg-indigo-50 shadow-inner">
+                </div>
             </div>
 
             <div class="flex items-center justify-center gap-6">
@@ -133,6 +162,23 @@
 
         // Initialize display on load
         balanceDisplay.innerText = currentBalance;
+
+        window.setAmount = (val) => {
+            amountInput.value = val;
+            handleCustomInput();
+        }
+
+        window.handleCustomInput = () => {
+            const val = parseInt(amountInput.value);
+            const buttons = document.querySelectorAll('.amt-btn');
+            buttons.forEach(btn => {
+                if (parseInt(btn.getAttribute('data-val')) === val) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+        }
 
         window.adjustPoints = (action) => {
             let amount = parseInt(amountInput.value);
