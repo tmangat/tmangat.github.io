@@ -20,5 +20,8 @@ video {
 }
 
 img {
-	width: 25%;
+	width: 1%;
+	image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
 }

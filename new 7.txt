@@ -1,0 +1,19 @@
+Primary
+    Assault Rifles
+    Sub Machine Guns
+    Light Machine Guns
+    Sniper Rifles
+    Riot Shield 
+
+Secondary
+    Machine Pistols
+    Shotguns
+    Handguns
+    Launchers 
+
+Equipment
+Special Grenades 
+Perk 1
+Perk 2
+Perk 3
+Death Streak
