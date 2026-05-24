@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Good Boy Points Tracker</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>😈</text></svg>">
+    
+    <!-- Mobile Browser Theme Colors -->
+    <meta name="theme-color" content="#e0e7ff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap');
@@ -90,9 +99,12 @@
                 
                 <div class="flex flex-wrap items-center justify-center gap-2 mb-3">
                     <button onclick="setAmount(1)" class="amt-btn active px-4 py-2 rounded-xl font-black active:scale-95" data-val="1">1</button>
+                    <button onclick="setAmount(5)" class="amt-btn px-4 py-2 rounded-xl font-black active:scale-95" data-val="5">5</button>
                     <button onclick="setAmount(10)" class="amt-btn px-4 py-2 rounded-xl font-black active:scale-95" data-val="10">10</button>
+                    <button onclick="setAmount(20)" class="amt-btn px-4 py-2 rounded-xl font-black active:scale-95" data-val="20">20</button>
                     <button onclick="setAmount(50)" class="amt-btn px-4 py-2 rounded-xl font-black active:scale-95" data-val="50">50</button>
                     <button onclick="setAmount(100)" class="amt-btn px-4 py-2 rounded-xl font-black active:scale-95" data-val="100">100</button>
+                    <button onclick="setAmount(250)" class="amt-btn px-4 py-2 rounded-xl font-black active:scale-95" data-val="250">250</button>
                 </div>
                 
                 <div class="flex items-center justify-center gap-3">
